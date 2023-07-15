@@ -1,0 +1,11 @@
+.book {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+
+.progress-container {
+  display: flex;
+  gap: 6rem;
+}
