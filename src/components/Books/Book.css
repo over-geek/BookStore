@@ -48,6 +48,7 @@ p {
 
 .progress-container {
   display: flex;
+
   /* gap: 6rem; */
   align-items: center;
 }
