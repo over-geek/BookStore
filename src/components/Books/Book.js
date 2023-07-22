@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import Button from '../Button/Button';
 import './Book.css';
 
-const Book = ({ book, delBook }) => {
-  const { id, title, author } = book;
+const Book = ({ book, onClick }) => {
+  const { title, author } = book;
   return (
     <li className="book">
       <div>
@@ -12,7 +12,7 @@ const Book = ({ book, delBook }) => {
           <p>{author}</p>
         </div>
         <div>
-          <button type="button" onClick={() => delBook(id)}>Remove</button>
+          <button type="button" onClick={onClick}>Remove</button>
         </div>
       </div>
       <div className="progress-container">
@@ -39,9 +39,8 @@ Book.propTypes = {
   book: PropTypes.shape({
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
-    id: PropTypes.string.isRequired,
   }).isRequired,
-  delBook: PropTypes.func.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default Book;

@@ -1,45 +1,31 @@
-import { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import Book from '../components/Books/Book';
-import './BooksPage.css';
 import Form from '../components/Form/Form';
+import { removeBookItem } from '../redux/books/booksSlice';
+import './BooksPage.css';
 
-function BooksPage() {
-  const [books, setBooks] = useState([
-    {
-      id: uuidv4(),
-      title: 'Hunger Games',
-      author: 'Suzanne Collins',
-    },
-  ]);
-  const addBook = (title, author) => {
-    const newBook = {
-      id: uuidv4(),
-      title,
-      author,
-    };
-    setBooks([...books, newBook]);
-  };
+const BooksPage = () => {
+  const books = useSelector((state) => state.booksSlice.books);
+  const dispatch = useDispatch();
 
-  const delBook = (id) => {
-    setBooks([
-      ...books.filter((book) => book.id !== id),
-    ]);
+  const handleRemoveBook = (id) => {
+    dispatch(removeBookItem(id));
   };
 
   return (
     <div className="books-section">
       <div className="books-container">
         {books.map((book) => (
-          <Book key={book.id} book={book} delBook={delBook} />
+          <Book key={book.item_id} book={book} onClick={() => handleRemoveBook(book.item_id)} />
         ))}
       </div>
       <div>
         <h4>ADD NEW BOOK</h4>
-        <Form addBook={addBook} />
+        <Form />
       </div>
     </div>
   );
-}
+};
 
 export default BooksPage;
