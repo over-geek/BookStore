@@ -6,13 +6,13 @@ import './App.css';
 
 function App() {
   return (
-    <>
+    <div>
       <Header />
       <Routes>
         <Route path="/" element={<BooksPage />} />
         <Route path="categories" element={<CategoriesPage />} />
       </Routes>
-    </>
+    </div>
   );
 }
 
