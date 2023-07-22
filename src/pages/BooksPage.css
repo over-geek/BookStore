@@ -4,11 +4,22 @@
   flex-direction: column;
 }
 
+h4 {
+  color: #888;
+  margin-bottom: 1.1rem;
+}
+
 .books-section {
   padding: 2.313rem 6.25rem;
   gap: 2.5rem;
+  background-color: rgba(0, 0, 0, 0.05);
+  min-height: 86vh;
 }
 
 .books-container {
   gap: 0.938rem;
+}
+
+.form-container {
+  margin-bottom: 4rem;
 }

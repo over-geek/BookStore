@@ -17,18 +17,36 @@ const BooksPage = () => {
     dispatch(removeBookItem(id));
   };
 
+  const btnStyle = {
+    fontSize: '0.75rem',
+    color: 'rgba(255, 255, 255, 0.6)',
+    backgroundColor: '#0290ff',
+    padding: '0.43rem 1.2rem',
+    cursor: 'pointer',
+    border: 'none',
+    borderRadius: '3px',
+  };
+
+  const formBtnStyle = { ...btnStyle, color: '#fff' };
+
   return (
-    <div className="books-section">
+    <section className="books-section">
       <div className="books-container">
         {books.map((book) => (
-          <Book key={book.item_id} book={book} onClick={() => handleRemoveBook(book.item_id)} />
+          <Book
+            key={book.item_id}
+            book={book}
+            btnStyle={btnStyle}
+            onClick={() => handleRemoveBook(book.item_id)}
+          />
         ))}
       </div>
-      <div>
+      <hr />
+      <div className="form-container">
         <h4>ADD NEW BOOK</h4>
-        <Form />
+        <Form btnStyle={formBtnStyle} />
       </div>
-    </div>
+    </section>
   );
 };
 
