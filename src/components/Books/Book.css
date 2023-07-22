@@ -1,11 +1,59 @@
+p {
+  font-size: 0.7rem;
+}
+
 .book {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  border: 1px solid black;
+  background-color: #fff;
+  padding: 1rem 9rem 1rem 1rem;
+  border-radius: 4px;
+}
+
+.book-title {
+  font-weight: bold;
+}
+
+.book-author-name {
+  color: #4386bf;
+}
+
+.btn-container {
+  margin-top: 1.3rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.current-chapter-text {
+  font-size: 0.7rem;
+  margin-bottom: 5px;
+  color: #121212;
+}
+
+.chapter-text {
+  font-size: 0.8rem;
 }
 
 .progress-container {
   display: flex;
   gap: 6rem;
+  align-items: center;
+}
+
+.progress-tracking-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.percent-complete {
+  font-size: 2rem;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.7)
+}
+
+.progress-btn-container {
+  margin-top: 0.7rem;
 }
