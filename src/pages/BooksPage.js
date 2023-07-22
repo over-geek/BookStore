@@ -18,13 +18,16 @@ const BooksPage = () => {
   };
 
   const btnStyle = {
-    color: '#fff',
+    fontSize: '0.75rem',
+    color: 'rgba(255, 255, 255, 0.6)',
     backgroundColor: '#0290ff',
-    padding: '3px 5px',
+    padding: '0.43rem 1.2rem',
     cursor: 'pointer',
     border: 'none',
     borderRadius: '3px',
   };
+
+  const formBtnStyle = { ...btnStyle, color: '#fff' };
 
   return (
     <section className="books-section">
@@ -41,7 +44,7 @@ const BooksPage = () => {
       <hr />
       <div className="form-container">
         <h4>ADD NEW BOOK</h4>
-        <Form btnStyle={btnStyle} />
+        <Form btnStyle={formBtnStyle} />
       </div>
     </section>
   );
