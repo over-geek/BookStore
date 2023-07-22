@@ -33,10 +33,10 @@ const Book = ({ book, onClick, btnStyle }) => {
           <div
             style={{
               borderRadius: '50%',
-              border: '5px solid #307bbe',
+              border: '5px solid #379cf6',
               borderLeftColor: '#e8e8e8',
-              width: '68px',
-              height: '68px',
+              width: '60px',
+              height: '60px',
             }}
           />
           <div>
@@ -53,7 +53,7 @@ const Book = ({ book, onClick, btnStyle }) => {
             <p className="chapter-text">Chapter 3: &quot;A lesson Learned&quot;</p>
           </div>
           <div className="progress-btn-container">
-            <Button name="UPDATE PROGRESS REPORT" btnStyle={btnStyle} onClick={() => 'clicked'} />
+            <Button name="UPDATE PROGRESS" btnStyle={btnStyle} onClick={() => 'clicked'} />
           </div>
         </div>
       </div>
