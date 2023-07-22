@@ -20,6 +20,8 @@ function Form() {
         },
       ));
     }
+    setTitle('');
+    setAuthor('');
   };
 
   return (
