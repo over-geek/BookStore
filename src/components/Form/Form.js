@@ -10,13 +10,16 @@ function Form() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(addBookItem(
-      {
-        item_id: uuidv4(),
-        title,
-        author,
-      },
-    ));
+    if (title.trim()) {
+      dispatch(addBookItem(
+        {
+          item_id: uuidv4(),
+          title,
+          author,
+          category: 'Fiction',
+        },
+      ));
+    }
   };
 
   return (
