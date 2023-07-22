@@ -11,6 +11,17 @@ p {
   border-radius: 4px;
 }
 
+.category-text,
+.current-chapter-text,
+.completed {
+  color: #121212;
+  opacity: 50%;
+}
+
+.category-text {
+  font-weight: bold;
+}
+
 .book-title {
   font-weight: bold;
 }
@@ -37,7 +48,7 @@ p {
 
 .progress-container {
   display: flex;
-  gap: 6rem;
+  /* gap: 6rem; */
   align-items: center;
 }
 
@@ -45,15 +56,20 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.6rem;
+  gap: 1.3rem;
+  margin-right: 4.9rem;
 }
 
 .percent-complete {
   font-size: 2rem;
-  font-weight: 300;
-  color: rgba(0, 0, 0, 0.7);
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .progress-btn-container {
   margin-top: 0.7rem;
+}
+
+.chapter-container {
+  margin-left: 3.6rem;
 }
