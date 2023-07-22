@@ -18,6 +18,7 @@ export const fetchBooks = createAsyncThunk(FETCH_BOOKS, async (post, { dispatch 
     type: FETCH_BOOKS,
     payload,
   });
+  return payload;
 });
 
 export const addBookItem = createAsyncThunk(ADD_BOOK_ITEM, async (payload, { dispatch }) => {
@@ -48,19 +49,20 @@ const initialState = {
   books: [],
 };
 
-const booksSlice = createReducer(initialState, (builder) => {
-  builder.addCase(fetchBooks.fulfilled, (state, { payload }) => ({
-    ...state,
-    books: [...payload],
-  }));
-  builder.addCase(addBookItem.fulfilled, (state, { payload }) => ({
-    ...state,
-    books: [...state.books, payload],
-  }));
-  builder.addCase(removeBookItem.fulfilled, (state, { payload }) => ({
-    ...state,
-    books: state.books.filter((book) => book.item_id !== payload),
-  }));
-});
+const booksSlice = createReducer(initialState,
+  (builder) => {
+    builder.addCase(fetchBooks.fulfilled, (state, { payload }) => ({
+      ...state,
+      books: [...payload],
+    }));
+    builder.addCase(addBookItem.fulfilled, (state, { payload }) => ({
+      ...state,
+      books: [...state.books, payload],
+    }));
+    builder.addCase(removeBookItem.fulfilled, (state, { payload }) => ({
+      ...state,
+      books: state.books.filter((book) => book.item_id !== payload),
+    }));
+  });
 
 export default booksSlice;
