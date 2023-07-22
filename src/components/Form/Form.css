@@ -1,0 +1,25 @@
+.form {
+  display: flex;
+  width: 100%;
+  gap: 2.1rem;
+}
+
+.title-input {
+  width: 55%;
+}
+
+.author-input {
+  width: 35%;
+}
+
+.title-input,
+.author-input {
+  padding: 8px;
+  outline: none;
+  border-radius: 4px;
+  border: none;
+}
+
+.form button {
+  width: 10%;
+}
