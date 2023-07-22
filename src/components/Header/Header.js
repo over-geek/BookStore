@@ -14,7 +14,7 @@ const Header = () => (
       </nav>
     </div>
     <div className="user-icon-container">
-      <FaUser />
+      <FaUser style={{ color: '#0290ff' }} />
     </div>
   </header>
 );
